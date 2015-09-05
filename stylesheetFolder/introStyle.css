@@ -1,0 +1,204 @@
+.footerOnBottom
+{
+    background-color: transparent;
+    padding-bottom: 32px;
+}
+
+.secondPage
+{
+    background-color: black;
+    background-image: none;
+}
+
+#prhaseDiv
+{
+    margin-top: 10%;
+    text-align: center;
+}
+
+#wrapElem
+{
+    position: relative;
+}
+
+#pathToWonderland
+{
+	color: darkgreen;
+    font-size: 2em;
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    text-align: center;
+}
+
+#quest1, #quest2, #quest3
+{
+
+	color: darkgreen;
+    font-size: 2em;
+    position: absolute;
+}
+
+#hyperlinkDiv, #mirrorDiv
+{
+    text-align: center;
+}
+
+h1
+{
+	display: block;
+	width: 500px;
+	margin: 0 auto;
+	color: darkgreen;
+    font-size: 2em;
+}
+
+#reallyWhiteRabbit
+{
+    color: white;/*!*/
+}
+
+#whiteRabbitImg
+{
+    visibility: hidden;
+    animation: whiteRabbitImg 2.5s;
+}
+
+#prhase1
+{
+    animation: prhase1 2s;
+}
+
+#prhase2
+{
+    animation: prhase2 2s;
+}
+
+#prhase3
+{
+    animation: prhase3 2s;
+}
+
+#prhase4
+{
+    animation: prhase4 1.5s;
+    animation-timing-function: linear;
+}
+
+#prhase5
+{
+    animation: prhase5 1.0s;
+}
+
+#prhase6
+{
+    animation: prhase6 2s;
+}
+
+#prhase7
+{
+    animation: prhase7 2s;
+    animation-timing-function: linear;
+}
+
+#prhase8
+{
+    animation: prhase8 2s;
+    animation-timing-function: linear;
+}
+
+#quest1, #quest2, #quest3
+{
+    animation: quest 1.0s;
+}
+
+
+@keyframes quest
+{
+    0%
+	{
+        transform: translateX(-2000%);
+    }
+}
+
+@keyframes prhase1
+{
+	0%
+	{
+		transform: translateX(-200%);
+	}	
+}
+
+@keyframes prhase2
+{
+    0%
+    {
+        transform: translateY(2000%);
+    }
+    
+    40%
+    {
+        transform: translateY(-100px);
+    }
+    
+    70%
+    {
+        transform: translateY(32px);
+    }
+}
+
+@keyframes prhase3
+{
+	0%
+	{
+        transform: rotate3d(0, 0, 1, -64deg);
+        opacity: 0;
+	}
+	100%
+	{
+        opacity: 1.0;
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+    
+}
+
+@keyframes prhase4
+{
+	0%
+	{
+        opacity: 0.2;
+        transform: scale3d(0.2, 0.2, 1) translateY(-450px);
+	}
+    50%
+    {
+        opacity: 0.5;
+        transform: scale3d(0.5, 0.3, 1) translateY(80px);
+    }
+
+    75%
+    {
+        opacity: 0.8;
+        transform: scale3d(0.8, 0.8, 1) translateY(40px);
+    }
+}
+
+@keyframes prhase5
+{
+    0%
+    {
+        transform: translateY(-2000px);
+    }
+}
+
+@keyframes whiteRabbitImg
+{
+    0%
+    {
+        transform: translateY(-2000px) rotate3d(0, 0, 1, 512deg);
+        visibility: visible;
+    }
+    100%
+    {
+        visibility: visible;
+    }
+        
+}

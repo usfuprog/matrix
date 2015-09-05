@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javaScript&#38;Checkbox</title>
+    <meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8" />
+    <script src="scriptFolder/indexScript.js" type="text/javascript"></script>
+    <script src="scriptFolder/menuGo.js" type="text/javascript"></script>
+    
+<!--    <link href="stylesheetFolder/indexStyle.less" rel="stylesheet/less" type="text/css" />
+    <link href="stylesheetFolder/introStyle.less" rel="stylesheet/less" type="text/css" />
+    
+    <script src="../less.js-master/dist/less.js" type="text/javascript"></script>-->
+    <link href="stylesheetFolder/indexStyle.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheetFolder/introStyle.css" rel="stylesheet" type="text/css" />
+<!--    <script src="scriptFolder/browserGo.js" type="text/javascript"></script>-->
+</head>
+<body>
+    <nav>
+        <button id="intro" title="blue pil">Intro</button>
+        <cite title="Choice" class="citeBlue"></cite>
+        <button id="main" title="red pil">Main</button>
+    </nav>
+    <main>
+
+    </main>
+    <div id="wrapSpoon">
+        <img src="imageFolder/moka-spoon-chromed-steel-cutlery-fresco-6256-z1.png" alt="moka-spoon-chromed-steel" id="spoonPartFirst" />
+        <img src="imageFolder/moka-spoon-chromed-steel-cutlery-fresco-6256-z2.png" alt="moka-spoon-chromed-steel" id="spoon2" />
+        <img src="imageFolder/moka-spoon-chromed-steel-cutlery-fresco-6256-z3.png" alt="moka-spoon-chromed-steel" id="spoon3" />
+        <img src="imageFolder/moka-spoon-chromed-steel-cutlery-fresco-6256-z4.png" alt="moka-spoon-chromed-steel" id="spoonPartLast" />
+    </div>
+    <div id="cleaner"></div>
+    
+    <section>
+        <div id="controlPanel">
+            <div class="rightSideImg">
+                <span class="onGlass fadingTextAnim"></span>
+                <span class="onGlass fadingTextAnim"></span>
+                <img src="imageFolder/Spy-Optic-Men-s-Hielo-Black-Polarized-Sunglasses-1.png" alt="sunglasses-black-polarized" id="glass" />
+            </div>
+            <h4>CONTROL PANEL</h4>
+            <div>
+                <button class="superButtonOn" id="startOrContinue">Start</button>
+                <button class="superButtonOn">Pause</button>
+                <button class="superButtonOn">Restart</button>
+                <button class="superButtonOn">Stop <span>(slow)</span></button>
+                <button class="superButtonOn">Stop <span>(immediatly)</span></button>
+                <button class="superButtonOn">No spoon</button>
+                <p></p>
+                <div class="ctrlBlock">
+                    <label> New lines per minute (estimate)</label>
+                    <br />
+                    <input type="range" min="1" max="500" step="1" value="222" />
+                    <br />
+                    <input type="number" min="1" max="500" step="1" value="222" />
+                </div>
+                <div class="ctrlBlock">
+                    <label> Restart on window resize </label>
+                    <br />
+                    <input type="checkbox" checked></input>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <span id="copyright">&copy ALL RIGHT RESERVED</span>
+    </footer>
+</body>
+
+</html>
