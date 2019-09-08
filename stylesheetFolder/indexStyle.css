@@ -3,6 +3,7 @@ body
     margin: 0;
     background-image: url(../imageFolder/background.jpg);
     padding: 1%;
+
 }
 
 main
@@ -91,9 +92,9 @@ nav button:nth-of-type(2)
     border-top: none;
     border-bottom: none;
     background: -moz-linear-gradient(top, silver, grey, silver);
-	background: -o-linear-gradient(top, silver, grey, silver);
-	background: -webkit-linear-gradient(top, silver, grey, silver);
-	background: linear-gradient(top, silver, grey, silver);
+    background: -o-linear-gradient(top, silver, grey, silver);
+    background: -webkit-linear-gradient(top, silver, grey, silver);
+    background: linear-gradient(top, silver, grey, silver);
     min-width: 700px;
     padding-bottom: 128px;
 }

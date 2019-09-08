@@ -1,3 +1,13 @@
+#mirrorColor
+{
+    opacity: 0.5;
+}
+
+#mirrorDiv
+{
+    cursor: pointer;
+}
+
 .footerOnBottom
 {
     background-color: transparent;
@@ -33,7 +43,7 @@
 #quest1, #quest2, #quest3
 {
 
-	color: darkgreen;
+    color: darkgreen;
     font-size: 2em;
     position: absolute;
 }
@@ -49,12 +59,17 @@ h1
 	width: 500px;
 	margin: 0 auto;
 	color: darkgreen;
-    font-size: 2em;
+	font-size: 2em;
 }
 
 #reallyWhiteRabbit
 {
     color: white;/*!*/
+}
+
+#mirrorColor
+{
+    opacity: 0.5;
 }
 
 #whiteRabbitImg
@@ -193,12 +208,13 @@ h1
 {
     0%
     {
-        transform: translateY(-2000px) rotate3d(0, 0, 1, 512deg);
+        transform: translateY(-2000px) rotate3d(0, 0, 1, -512deg);
         visibility: visible;
     }
     100%
     {
         visibility: visible;
+        transform: rotate3d(0, 0, 1, 512deg);
     }
         
 }

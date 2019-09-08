@@ -1,4 +1,4 @@
-var mainData = new Array();
+﻿var mainData = new Array();
 var buttons;
 
 window.onload = function()
@@ -26,8 +26,13 @@ window.onload = function()
     }
     
     fillMainElem();
+    if (navigator.userAgent.indexOf("CLR") > -1 || navigator.userAgent.indexOf("IE") > -1)
+    {
+	document.getElementById("controlPanel").style.backgroundColor="silver";
+	document.getElementById("controlPanel").style.height="200px";
+    }
     
-    intro.addEventListener("click", goToIntro, false);
+//    intro.addEventListener("click", goToIntro, false);
     main.addEventListener("click", goToMain, false);
     
     buttons = document.querySelectorAll("#controlPanel div button");
@@ -158,7 +163,7 @@ function buttonWasClicked()
         onGlassSpan("START");
         startNow();
     }
-    if (buttonText.indexOf("immediatly") >= 0)
+    if (buttonText.indexOf("immediately") >= 0)
     {
         onGlassSpan("STOP");
         stopImmediatly();
@@ -412,7 +417,7 @@ function goToIntro()
     controlPanel.classList.add("clearElem");
     document.body.classList.add("secondPage");
     document.getElementsByTagName("cite").item(0).innerHTML=
-    " We are not here, because we free. We are here, because we not free ... ";
+    " You`ve already made the choice. Now you have to understand, why you made it ... ";
     document.getElementsByTagName("cite").item(0).classList.toggle("citeRed");
     document.getElementsByTagName("cite").item(0).classList.toggle("citeBlue");
     var prhaseDiv = document.createElement("div");
@@ -441,7 +446,7 @@ function goToIntro()
     menuGo(mirrorImg, "http://www.ppframing.com");
     mirrorImg.onclick = function()
     {
-        window.location.replace("index.html");
+        window.location.replace("index.php");
     }
     
     startAnim();
@@ -460,8 +465,8 @@ function goToMain()
     spoonPartLast.classList.remove("clearElem");
     document.body.classList.remove("secondPage");
     document.getElementsByTagName("cite").item(0).innerHTML=
-    " You`ve already made it. Now you have to understand, why you made it ... ";
-    //&larr;&rarr;
+    " We not here, because we are free. We here, because we are not free ... ";
+    //←→
     document.getElementsByTagName("cite").item(0).classList.toggle("citeRed");
     document.getElementsByTagName("cite").item(0).classList.toggle("citeBlue");
     var prhaseDivParent = document.getElementsByTagName("section").item(0);
@@ -669,7 +674,7 @@ function startAnim()
     startAnim.timeoutRef3 = setTimeout(function()
     {
         stackOfPrhases.push("FOLLOW THE <span id='reallyWhiteRabbit'>WHITE</span> RABBIT");
-        stackOfPrhases.push("(link below)");
+        stackOfPrhases.push("(click mirror link below)");
         makeH1(stackOfPrhases, startPos, idx);
         appendNextPrhase(stackOfPrhases, startPos, idx);
     }, intervalVal);
@@ -727,7 +732,7 @@ function appendQuestToDiv(idx)
         }
         var spanNow = document.createElement("span");
         spanNow.id = "quest" + (idx * 1 + 1);
-        spanNow.innerHTML = "&nbsp&nbsp?";
+        spanNow.innerHTML = "  ?";
         prhaseDiv.lastChild.appendChild(spanNow);
         spanNow.style.left = prhase3z.offsetLeft + prhase3z.clientWidth + (idx * 32) + "px";
         spanNow.style.top = 0 + "px";

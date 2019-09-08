@@ -1,4 +1,4 @@
-function menuGo(elem, menuInnerText)
+﻿function menuGo(elem, menuInnerText)
 {
     var menuRef;
     var menuContent=menuInnerText;
@@ -9,8 +9,19 @@ function menuGo(elem, menuInnerText)
     
     getMenu();
     
-    elem.onmouseout=hideMenu;
+    elem.onmouseout=hideNow;
     elem.onmousemove=prepareMenuToShow;
+    elem.onmousedown=hideNow;
+    
+    function hideNow()
+    {
+        clearTimeout(timeoutRef);
+        setTimeout(function()
+        {
+            if (disapearRequired)
+                menuRef.style.display="none";
+        }, 64);
+    }
     
     function prepareMenuToShow(event)
     {
@@ -42,6 +53,7 @@ function menuGo(elem, menuInnerText)
     {
         menuRef=document.createElement("span");
         menuRef.innerHTML=menuContent;
+        menuRef.setAttribute("class", "menuFromMenuGoScript");
         notReadyClick();
         menuRef.onmouseover=readyClick;
         menuRef.onmouseout=notReadyClick;
@@ -76,7 +88,7 @@ function menuGo(elem, menuInnerText)
         menuRef.style.cssText = 
             "position: absolute; background-color: grey; border: 3px double silver; "+
             "color: white; padding: 2px; font-size: 0.7em; display: none";
-        disapearRequired=true;
+        disapearRequired = true;
     }
     
     function getCoords(event)
