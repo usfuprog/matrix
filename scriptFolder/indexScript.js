@@ -1,4 +1,4 @@
-﻿var mainData = new Array();
+var mainData = new Array();
 var buttons;
 
 window.onload = function()
@@ -28,11 +28,11 @@ window.onload = function()
     fillMainElem();
     if (navigator.userAgent.indexOf("CLR") > -1 || navigator.userAgent.indexOf("IE") > -1)
     {
-	document.getElementById("controlPanel").style.backgroundColor="silver";
-	document.getElementById("controlPanel").style.height="200px";
+      document.getElementById("controlPanel").style.backgroundColor="silver";
+      document.getElementById("controlPanel").style.height="200px";
     }
     
-//    intro.addEventListener("click", goToIntro, false);
+    intro.addEventListener("click", goToIntro, false);
     main.addEventListener("click", goToMain, false);
     
     buttons = document.querySelectorAll("#controlPanel div button");
@@ -446,7 +446,7 @@ function goToIntro()
     menuGo(mirrorImg, "http://www.ppframing.com");
     mirrorImg.onclick = function()
     {
-        window.location.replace("index.php");
+        window.location.replace("index.html");
     }
     
     startAnim();
@@ -466,7 +466,7 @@ function goToMain()
     document.body.classList.remove("secondPage");
     document.getElementsByTagName("cite").item(0).innerHTML=
     " We not here, because we are free. We here, because we are not free ... ";
-    //←→
+    //<>
     document.getElementsByTagName("cite").item(0).classList.toggle("citeRed");
     document.getElementsByTagName("cite").item(0).classList.toggle("citeBlue");
     var prhaseDivParent = document.getElementsByTagName("section").item(0);

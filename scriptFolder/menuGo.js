@@ -1,4 +1,4 @@
-﻿function menuGo(elem, menuInnerText)
+function menuGo(elem, menuInnerText)
 {
     var menuRef;
     var menuContent=menuInnerText;
